@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Map</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <link rel="stylesheet" href="pmap.css">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+</head>
+<body>
+        <div class="navbar">
+                <ul class="glass-eff">
+                        <li><a href="#">Weather</a></li>
+                        <li id="homebtn"><a href="index.html">Home</a></li>
+                        <li>
+                                <label for="search_city">
+                                        <input type="text" name="search_city" id="search_city">
+                                        <button id="srbt">Search</button>
+                                </label>
+                        </li>
+                </ul>
+        </div>
+        <div class="dmenu" id="omenu">
+                <select onchange="rmap()" name="sllayer" id="sllayer1">
+                <option disabled>Choose a Tile Layer</option>
+                <option value="clouds_new">Clouds</option>
+                <option value="precipitation_new">Precipitation</option>
+                <option value="pressure_new">Pressure</option>
+                <option value="wind_new">Wind Speed</option>
+                <option selected value="temp_new">Temperature</option>
+                </select>
+        </div>
+        <div style="" id="map"></div>
+        <script src="pmap.js"></script>
+</body>
+</html>

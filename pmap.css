@@ -1,0 +1,107 @@
+* {
+        margin: 0;
+        padding: 0;
+}
+
+.navbar {
+        /* box-shadow: 0 0 2px 2px black; */
+        top: 0;
+        z-index: 1;
+        margin-top: 0px;
+        zoom: 70%;
+}
+.navbar ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: rgba(31,31,31,255);
+        height: 60px;
+        font-style: normal;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* display: none; */
+        /* position: fixed; */
+}
+.navbar li {
+        padding-right: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: x-large;
+        margin-right: 10px;
+}
+.navbar li:first-child {
+        margin-right: auto;
+        margin-left: 20px;
+}
+.navbar a {
+        text-decoration: none;
+        color: white;   
+}
+.glass-eff {
+        background: rgba(0,0,0,0.4);
+        backdrop-filter: saturate(180%) blur(20px);
+}
+#search_city {
+        height: 40px;
+        width: 280px;
+        border-radius: 10px;
+        font-size: large;
+        outline: none;
+        color: black;
+        zoom: 86%;
+        border: none;
+}
+#search_city:hover {
+        box-shadow: 0 0 8px white;
+        transition: 0.4s;
+}
+#search_city:focus {
+        box-shadow: 0 0 8px white;
+        transition: 0.4s;
+}
+#srbt {
+        height: 40px;
+        width: 100px;
+        font-size: large;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+        color: black;
+        zoom: 86%;
+        border: none;
+}
+#map {
+        z-index: 0;
+        height: 100vh;
+        /* height: 680px; */
+}
+select {
+        position: fixed;
+        z-index: 1;
+        top: 10%;
+        left: 88%;
+        font-size: medium;
+        outline: none;
+        cursor: pointer;
+        border-radius: 20px;
+}
+#srbt:hover {
+        box-shadow: 0 0 8px white;
+        transition: 0.4s;
+}
+#srbt:active {
+        transform: scale(0.8);
+        transition: 0.1s;
+}
+option:hover {
+        background-color: red;
+}
+#homebtn:active {
+        transform: scale(0.8);
+        transition: 0.1s;
+}
+#sllayer1 option:hover {
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather</title>
+        <link rel="stylesheet" href="wthcss.css">
+</head>
+<body>
+        <img src="" alt="" id="bg">
+        <div class="navbar">
+                <ul class="glass-eff">
+                        <li><a href="#">Weather</a></li>
+                        <li id="chartbtn"><a href="#"><svg onclick="showChart()" class="wicon" xmlns="http://www.w3.org/2000/svg" height="60" viewBox="0 -960 960 960" width="60"><path d="m105-233-65-47 200-320 120 140 160-260 109 163q-23 1-43.5 5.5T545-539l-22-33-152 247-121-141-145 233ZM863-40 738-165q-20 14-44.5 21t-50.5 7q-75 0-127.5-52.5T463-317q0-75 52.5-127.5T643-497q75 0 127.5 52.5T823-317q0 26-7 50.5T795-221L920-97l-57 57ZM643-217q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm89-320q-19-8-39.5-13t-42.5-6l205-324 65 47-188 296Z"/></svg></a></li>
+                        <li id="mapbtn"><a href="pmap.html">Map</a></li>
+                        <li>
+                                <label for="search_city">
+                                        <input type="text" name="search_city" id="search_city">
+                                        <button id="srbt">Search</button>
+                                </label>
+                        </li>
+                </ul>
+        </div>
+        <div id="srdcity">
+                <span id="srdcityname">srd_city_name</span>
+                <span id="srdcitytemp">srd_city_temp</span> 
+                <span id="srdcitywmain">srd_city_wmain</span>
+                <span id="srdcityfeelslk">srd_city_feelslk</span> <br>
+
+        </div>
+        <div id="tdweatherss">
+        <div id="tdweather1">
+                <div id="tdweather1cards" class="glass-eff">
+
+                </div>
+                <div class="sunriseset glass-eff">
+                        <div class="sunrisesetm">
+                                <h2>Sunrise & Sunset</h2> <br>
+                                <div class="sunrisesetd">
+                                        <div class="sunicon">
+                                                <?xml version="1.0" encoding="UTF-8"?>
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                                <path d="M0 0 C3.82310976 2.0312851 6.62012457 4.56987428 8.80859375 8.2734375 C9.40236656 10.97560698 9.62040961 13.49772137 9.80859375 16.2734375 C11.78859375 16.2734375 13.76859375 16.2734375 15.80859375 16.2734375 C15.80859375 16.9334375 15.80859375 17.5934375 15.80859375 18.2734375 C-0.03140625 18.2734375 -15.87140625 18.2734375 -32.19140625 18.2734375 C-32.19140625 17.6134375 -32.19140625 16.9534375 -32.19140625 16.2734375 C-30.21140625 16.2734375 -28.23140625 16.2734375 -26.19140625 16.2734375 C-26.12953125 15.0771875 -26.06765625 13.8809375 -26.00390625 12.6484375 C-25.40870367 7.97775062 -23.62342332 5.55292048 -20.19140625 2.2734375 C-14.55127553 -1.85348741 -6.56699173 -2.17729137 0 0 Z " fill="#D3B40F" transform="translate(32.19140625,24.7265625)"/>
+                                                <path d="M0 0 C2.97790338 1.19116135 4.51091369 2.49522465 6.5 5 C6.5 5.99 6.5 6.98 6.5 8 C2.625 7.125 2.625 7.125 1.5 6 C1.17 10.62 0.84 15.24 0.5 20 C-0.16 20 -0.82 20 -1.5 20 C-1.83 15.38 -2.16 10.76 -2.5 6 C-3.16 6.66 -3.82 7.32 -4.5 8 C-5.49 8 -6.48 8 -7.5 8 C-7.11094382 5.27660672 -6.43262433 3.91096786 -4.75 1.6875 C-2.5 0 -2.5 0 0 0 Z " fill="#314561" transform="translate(24.5,2)"/>
+                                                <path d="M0 0 C0 0.99 0 1.98 0 3 C-3 5 -3 5 -6 5 C-5.625 3.0625 -5.625 3.0625 -5 1 C-3 0 -3 0 0 0 Z " fill="#33455F" transform="translate(47,28)"/>
+                                                <path d="M0 0 C2.475 0.495 2.475 0.495 5 1 C5.33 2.32 5.66 3.64 6 5 C3.83125748 4.49396008 2.00032373 4.00016187 0 3 C0 2.01 0 1.02 0 0 Z " fill="#34455F" transform="translate(1,28)"/>
+                                                <path d="M0 0 C0.99 0 1.98 0 3 0 C2.67 1.65 2.34 3.3 2 5 C0.68 5.33 -0.64 5.66 -2 6 C-1.49396008 3.83125748 -1.00016187 2.00032373 0 0 Z " fill="#324560" transform="translate(35,19)"/>
+                                                <path d="M0 0 C0.99 0 1.98 0 3 0 C5 3 5 3 5 6 C3.68 5.67 2.36 5.34 1 5 C0.67 3.35 0.34 1.7 0 0 Z " fill="#33455F" transform="translate(10,19)"/>
+                                                </svg> <br>
+                                                <?xml version="1.0" encoding="UTF-8"?>
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                                <path d="M0 0 C3.82310976 2.0312851 6.62012457 4.56987428 8.80859375 8.2734375 C9.40236656 10.97560698 9.62040961 13.49772137 9.80859375 16.2734375 C11.78859375 16.2734375 13.76859375 16.2734375 15.80859375 16.2734375 C15.80859375 16.9334375 15.80859375 17.5934375 15.80859375 18.2734375 C-0.03140625 18.2734375 -15.87140625 18.2734375 -32.19140625 18.2734375 C-32.19140625 17.6134375 -32.19140625 16.9534375 -32.19140625 16.2734375 C-30.21140625 16.2734375 -28.23140625 16.2734375 -26.19140625 16.2734375 C-26.12953125 15.0771875 -26.06765625 13.8809375 -26.00390625 12.6484375 C-25.40870367 7.97775062 -23.62342332 5.55292048 -20.19140625 2.2734375 C-14.55127553 -1.85348741 -6.56699173 -2.17729137 0 0 Z " fill="#D3B40F" transform="translate(32.19140625,24.7265625)"/>
+                                                <path d="M0 0 C0.66 0 1.32 0 2 0 C2.33 4.62 2.66 9.24 3 14 C3.66 13.34 4.32 12.68 5 12 C5.99 12 6.98 12 8 12 C7.61094382 14.72339328 6.93262433 16.08903214 5.25 18.3125 C3 20 3 20 0.5 20 C-2.47790338 18.80883865 -4.01091369 17.50477535 -6 15 C-6 14.01 -6 13.02 -6 12 C-2.125 12.875 -2.125 12.875 -1 14 C-0.67 9.38 -0.34 4.76 0 0 Z " fill="#324560" transform="translate(23,2)"/>
+                                                <path d="M0 0 C0 0.99 0 1.98 0 3 C-3 5 -3 5 -6 5 C-5.625 3.0625 -5.625 3.0625 -5 1 C-3 0 -3 0 0 0 Z " fill="#33455F" transform="translate(47,28)"/>
+                                                <path d="M0 0 C2.475 0.495 2.475 0.495 5 1 C5.33 2.32 5.66 3.64 6 5 C3.83125748 4.49396008 2.00032373 4.00016187 0 3 C0 2.01 0 1.02 0 0 Z " fill="#34455F" transform="translate(1,28)"/>
+                                                <path d="M0 0 C0.99 0 1.98 0 3 0 C2.67 1.65 2.34 3.3 2 5 C0.68 5.33 -0.64 5.66 -2 6 C-1.49396008 3.83125748 -1.00016187 2.00032373 0 0 Z " fill="#324560" transform="translate(35,19)"/>
+                                                <path d="M0 0 C0.99 0 1.98 0 3 0 C5 3 5 3 5 6 C3.68 5.67 2.36 5.34 1 5 C0.67 3.35 0.34 1.7 0 0 Z " fill="#33455F" transform="translate(10,19)"/>
+                                                </svg>
+                                        </div>
+                                        <div class="sunpost">
+                                                <span id="srs">sunrise_time</span> <br>
+                                                <span id="sst">sunset_time</span>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div id="tdweather2">
+                <div class="tdweather2hum glass-eff">
+                        <h2>Humidity</h2> <br> <br>
+                        <span id="humidityval">Humidity_val</span>
+                        <svg class="wicon" id="humidityic" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M580-240q25 0 42.5-17.5T640-300q0-25-17.5-42.5T580-360q-25 0-42.5 17.5T520-300q0 25 17.5 42.5T580-240Zm-202-2 260-260-56-56-260 260 56 56Zm2-198q25 0 42.5-17.5T440-500q0-25-17.5-42.5T380-560q-25 0-42.5 17.5T320-500q0 25 17.5 42.5T380-440ZM480-80q-137 0-228.5-94T160-408q0-100 79.5-217.5T480-880q161 137 240.5 254.5T800-408q0 140-91.5 234T480-80Zm0-80q104 0 172-70.5T720-408q0-73-60.5-165T480-774Q361-665 300.5-573T240-408q0 107 68 177.5T480-160Zm0-320Z"/></svg>
+                        
+                </div>
+                <div class="tdweather2prs glass-eff">
+                        <h2>Pressure</h2> <br><br>
+                        <span id="pressureval">Pressure_val</span>
+                        <svg class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="m320-160-56-57 103-103H80v-80h287L264-503l56-57 200 200-200 200Zm320-240L440-600l200-200 56 57-103 103h287v80H593l103 103-56 57Z"/></svg>
+                </div>
+                <div class="tdweather2ds glass-eff">
+                        <h2>Weather</h2> <br><br>
+                        <center><span id="weatherdsval">weatherds_val</span> <br>
+                        <span id="rwicon" class="hr_time_icon"></span></center> 
+                </div>
+                <div class="tdweather2fl glass-eff">
+                        <h2>Feels Like</h2> <br><br>
+                        <span id="feelslikeval">feelslike_val</span>
+                        <svg class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M480-120q-83 0-141.5-58.5T280-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-120Zm0-80q50 0 85-35t35-85q0-29-12.5-54T552-416l-32-24v-280q0-17-11.5-28.5T480-760q-17 0-28.5 11.5T440-720v280l-32 24q-23 17-35.5 42T360-320q0 50 35 85t85 35Zm0-120Z"/></svg>
+                </div>
+        </div>
+        <div id="tdweather3">
+                <div class="tdweather3ws glass-eff">
+                        <h2>Wind Speed</h2> <br><br>
+                        <span id="windspeedval">windspeed_val</span>
+                        <svg class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M750-614q-27 27-62 41t-70 14q-35 0-69-13.5T488-614l-75-75q-15-15-34-22.5t-39-7.5q-20 0-39 7.5T267-689l-75 75-57-57 75-75q27-27 61-40.5t69-13.5q35 0 68.5 13.5T469-746l75 75q16 16 35 23.5t39 7.5q20 0 39.5-7.5T693-671l75-75 57 57-75 75Zm0 200q-27 27-61.5 40.5T619-360q-35 0-69.5-13.5T488-414l-75-75q-15-15-34-22.5t-39-7.5q-20 0-39 7.5T267-489l-75 75-57-56 75-76q27-27 61-40.5t69-13.5q35 0 68.5 13.5T469-546l75 75q16 16 35 23.5t39 7.5q20 0 39.5-7.5T693-471l75-75 57 57-75 75Zm-1 200q-27 27-61 40.5T619-160q-35 0-69.5-13.5T488-214l-76-75q-15-15-34-22.5t-39-7.5q-20 0-39 7.5T266-289l-75 75-56-56 75-76q27-27 61-40.5t69-13.5q35 0 68.5 13.5T469-346l75 75q16 16 35.5 23.5T619-240q20 0 39-7.5t35-23.5l75-75 56 57-75 75Z"/></svg>
+                </div>
+                <div class="tdweather3wd glass-eff">
+                        <h2>Wind Degree</h2> <br><br>
+                        <span id="winddegreeval">winddegree_val</span>
+                        <svg class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M516-120 402-402 120-516v-56l720-268-268 720h-56Zm26-148 162-436-436 162 196 78 78 196Zm-78-196Z"/></svg>
+                </div>
+                <div class="tdweather3wg glass-eff">
+                        <h2>Wind Gust</h2> <br><br>
+                        <span id="windgustval">windgust_val</span>
+                        <svg class="wicon" class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg>
+                </div>
+                <div class="tdweather3tlh glass-eff">
+                        <h2>Temp Low & High</h2> <br><br>
+                        <span id="templhval">templh_val</span>
+                </div>
+        </div>
+        <div id="tdweather4">
+                <div class="tdweather4cldn glass-eff">
+                        <h2>Cloudiness</h2> <br><br>
+                        <span id="cldnval">cldn_val</span>
+                        <svg class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M260-160q-92 0-156-64T40-380q0-78 48.5-137.5T210-594q25-90 99-148t171-58q119 0 199.5 82.5T760-520q75 8 117.5 62T920-341q0 75-52.5 128T740-160H260Zm0-80h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-83-58.5-141.5T480-720q-63 0-112 34.5T296-597q78 13 131 73.5T480-380h-80q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Z"/></svg>
+                </div>
+                <div class="tdweather4pop glass-eff">
+                        <h2>Probability of Precipitation</h2> <br><br>
+                        <span id="popval">pop_val</span>
+                        <svg class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M558-84q-15 8-30.5 2.5T504-102l-60-120q-8-15-2.5-30.5T462-276q15-8 30.5-2.5T516-258l60 120q8 15 2.5 30.5T558-84Zm240 0q-15 8-30.5 2.5T744-102l-60-120q-8-15-2.5-30.5T702-276q15-8 30.5-2.5T756-258l60 120q8 15 2.5 30.5T798-84Zm-480 0q-15 8-30.5 2.5T264-102l-60-120q-8-15-2.5-30.5T222-276q15-8 30.5-2.5T276-258l60 120q8 15 2.5 30.5T318-84Zm-18-236q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/></svg>
+                </div>
+                <div class="tdweather4vis glass-eff">
+                        <h2>Visibility</h2> <br><br>
+                        <span id="visval">vis_val</span>
+                        <svg class="wicon" xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg>
+                </div>
+                <div class="tdweather4pod glass-eff">
+                        <h2>Air Quality</h2> <br><br>
+                        <span id="podval">pod_val</span>
+                        <span id="dayticon"></span>
+                </div>
+        </div>
+        <div id="tdweather5">
+                <div id="wchart" class="glass-eff">
+                        <h2>Weather Forecast</h2>
+                        <canvas id="chart1"></canvas>
+                </div>
+        </div>
+        </div>
+        <script src="wthjs.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</body>
+</html>
